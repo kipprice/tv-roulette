@@ -43,7 +43,7 @@ export const SearchField: React.FC<SearchFieldProps> = ({}) => {
         Search
       </Button>
 
-      <styled.a
+      <styled.button
         hideFrom={"lg"}
         fontSize={"xl"}
         color="white"
@@ -53,13 +53,13 @@ export const SearchField: React.FC<SearchFieldProps> = ({}) => {
         h={11}
         borderRadius={"md"}
         cursor={"pointer"}
-        href={`/${encodeURIComponent(localQuery)}`}
+        onClick={() => router.push(`/${encodeURIComponent(localQuery)}`)}
         display={"flex"}
         alignItems={"center"}
         justifyContent={"center"}
       >
         <Search />
-      </styled.a>
+      </styled.button>
     </Flex>
   );
 };
