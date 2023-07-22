@@ -17,7 +17,7 @@ export const SearchField: React.FC<SearchFieldProps> = ({}) => {
   return (
     <Flex gap={{ base: 2, lg: 8 }} flexGrow={1}>
       <styled.input
-        fontSize={{ base: "xl", sm: "2xl" }}
+        fontSize={{ base: "lg", sm: "2xl" }}
         px={4}
         py={1}
         borderRadius="lg"

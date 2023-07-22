@@ -50,6 +50,7 @@ export const Header: React.FC<HeaderProps> = ({}) => {
         display={"flex"}
         alignItems={"center"}
         justifyContent={"center"}
+        flexShrink={0}
       >
         <Tv />
       </styled.a>
