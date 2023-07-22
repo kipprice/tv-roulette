@@ -1,95 +1,48 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import { Flex, styled } from "@/lib/styled-system/jsx";
+import { PropsWithChildren } from "react";
 
-export default function Home() {
+export type HomePageProps = PropsWithChildren & {
+  /** */
+};
+
+export default async function HomePage({ children }: HomePageProps) {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <Flex flexDir={"column"} gap={8}>
+      <styled.h1 fontSize="2xl" fontWeight={"bold"}>
+        Welcome to TV Roulette!
+      </styled.h1>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      <styled.p maxW={{ base: "95vw", lg: "40rem" }}>
+        Are you the type of person who watches shows over and over again, until
+        you basically have them all memorized? Do you use these shows as
+        background noise, depending on the fact that you really don&apos;t need
+        to pay attention to be able to jump back in? Do you and your partner /
+        friends / family know you want to watch a particular procedural, but
+        don&apos;t want to actually decide where in that show you should start?
+        TV Roulette is for you!
+      </styled.p>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+      <styled.p maxW={{ base: "95vw", lg: "40rem" }}>
+        Simply search for the show you want, optionally narrow down the seasons,
+        and let TV Roulette suggest an episode to you. If you don&apos;t like
+        the results, you can retry as many times as you&apos;d like.
+      </styled.p>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+      <styled.p maxW={{ base: "95vw", lg: "40rem" }}>
+        TV Roulette uses the{" "}
+        <styled.a color="greenBlue" href="https://www.tvmaze.com/api">
+          TV Maze API
+        </styled.a>{" "}
+        to power the suggester, and was made by{" "}
+        <styled.a color="greenBlue" href="https://kipprice.com">
+          Kip
+        </styled.a>{" "}
+        and{" "}
+        <styled.a color="greenBlue" href="http://hjfarr.com">
+          HJ
+        </styled.a>
+        . If you like it, let us know!
+      </styled.p>
+    </Flex>
+  );
 }
