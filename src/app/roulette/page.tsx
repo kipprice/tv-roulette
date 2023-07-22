@@ -1,7 +1,6 @@
 import { redirect } from "next/navigation";
-import { PropsWithChildren } from "react";
 
-export type RoulettePageProps = PropsWithChildren & {
+export type RoulettePageProps = {
   /** */
 };
 

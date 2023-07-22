@@ -1,6 +1,4 @@
-import { PropsWithChildren } from "react";
-
-export type ShowRoulettePageProps = PropsWithChildren & {
+export type ShowRoulettePageProps = {
   params: { showId: string };
 };
 

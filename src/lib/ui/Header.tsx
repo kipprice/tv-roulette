@@ -1,7 +1,7 @@
 import React from "react";
-import { styled } from "../styled-system/jsx";
+import { Flex, styled } from "../styled-system/jsx";
 import { SearchField } from "./SearchField";
-import { Home } from "react-feather";
+import { Tv } from "react-feather";
 
 export type HeaderProps = {};
 
@@ -31,7 +31,10 @@ export const Header: React.FC<HeaderProps> = ({}) => {
         cursor={"pointer"}
         href="/"
       >
-        TV Roulette
+        <Flex alignItems="flex-start" gap={4}>
+          <Tv />
+          TV Roulette
+        </Flex>
       </styled.a>
       <styled.a
         hideFrom={"lg"}
@@ -48,7 +51,7 @@ export const Header: React.FC<HeaderProps> = ({}) => {
         alignItems={"center"}
         justifyContent={"center"}
       >
-        <Home />
+        <Tv />
       </styled.a>
       <SearchField />
     </styled.header>

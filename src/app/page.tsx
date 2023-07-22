@@ -1,11 +1,10 @@
 import { Flex, styled } from "@/lib/styled-system/jsx";
-import { PropsWithChildren } from "react";
 
-export type HomePageProps = PropsWithChildren & {
+export type HomePageProps = {
   /** */
 };
 
-export default async function HomePage({ children }: HomePageProps) {
+export default async function HomePage({}: HomePageProps) {
   return (
     <Flex flexDir={"column"} gap={8}>
       <styled.h1 fontSize="2xl" fontWeight={"bold"}>
@@ -33,7 +32,11 @@ export default async function HomePage({ children }: HomePageProps) {
         <styled.a color="greenBlue" href="https://www.tvmaze.com/api">
           TV Maze API
         </styled.a>{" "}
-        to power the suggester, and was made by{" "}
+        to power the suggester,{" "}
+        <styled.a color="greenBlue" href="https://feathericons.com/">
+          Feather
+        </styled.a>{" "}
+        for its icons, and was made by{" "}
         <styled.a color="greenBlue" href="https://kipprice.com">
           Kip
         </styled.a>{" "}

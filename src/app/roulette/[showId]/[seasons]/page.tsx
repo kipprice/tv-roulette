@@ -1,9 +1,8 @@
 import { suggestEpisode } from "@/lib/api/loadEpisodes";
 import { Flex, styled } from "@/lib/styled-system/jsx";
-import { PropsWithChildren } from "react";
 import { RegenerateButton } from "@/lib/ui/RegenerateButton";
 
-export type EpisodePageProps = PropsWithChildren & {
+export type EpisodePageProps = {
   params: {
     showId: string;
     seasons: string;

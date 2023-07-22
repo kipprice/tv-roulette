@@ -3,7 +3,7 @@ import { Flex, styled } from "@/lib/styled-system/jsx";
 import { Button } from "@/lib/ui/Button";
 import { useParams, useRouter } from "next/navigation";
 import React, { useState } from "react";
-import { ArrowRight } from "react-feather";
+import { Search } from "react-feather";
 
 export type SearchFieldProps = {};
 
@@ -40,7 +40,7 @@ export const SearchField: React.FC<SearchFieldProps> = ({}) => {
         onClick={() => router.push(`/${encodeURIComponent(localQuery)}`)}
         fontSize={{ base: "lg", md: "xl", lg: "2xl" }}
       >
-        Go
+        Search
       </Button>
 
       <styled.a
@@ -58,7 +58,7 @@ export const SearchField: React.FC<SearchFieldProps> = ({}) => {
         alignItems={"center"}
         justifyContent={"center"}
       >
-        <ArrowRight />
+        <Search />
       </styled.a>
     </Flex>
   );
